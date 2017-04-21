@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 2</title>
+    <link rel=StyleSheet type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <p>Copy<span class="secret"> (I know it's not very secret, but I wanted to try it out.)</span> me</p>
+    <div class="line">
+        <h1>heading 1, largest</h1>
+        <h2>heading 2</h2>
+    </div>
+    <div>
+        <p>
+            <a href="http://www.html-5-tutorial.com/">a link to html tags</a>
+        </p>
+        <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML elements</a>
+        </p>
+    </div>
+    <h6>Sourced links for bash commands from <a href="http://ss64.com/bash">http://ss64.com/bash</a></h6>
+    
+    <table>
+        <tr>
+            <!--row one-->
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <!--row two-->
+            <td><a href="http://ss64.com/bash/ls.html">ls</a> [options] [filename]</td>
+            <td>Lists file names of current directory or of children of a specified file.</td>
+            <td>
+                <pre>
+$ ls -a
+.       main.cpp
+..      other.cpp
+.git
+Debug
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row three-->
+            <td><a href="http://ss64.com/bash/file.html">file</a> [filename]</td>
+            <td>Details the type of file.</td>
+            <td>
+                <pre>
+$ file main.cpp
+main.cpp: ASCII c program text, with CRLF line terminators
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row four-->
+            <td>tree [filename]</td>
+            <td>Gives a ASCII map of files. If a file is specified it will start there.</td>
+            <td>
+                <pre>
+$ tree
+.
+├── README.md
+└── hello-world.html
+
+0 directories, 2 files
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row five-->
+            <td><a href="http://ss64.com/bash/type.html">type</a> [-atp] [name]</td>
+            <td>Descrbes what a command is.</td>
+            <td>
+                <pre>
+$ type -a grep
+grep is aliased to `grep --color=auto'
+grep is /bin/grep
+
+$ type help
+help is a shell builtin
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row six-->
+            <td>apropos [term]</td>
+            <td>Searches for the term and returns a list of commands that contain it.</td>
+            <td>
+                <pre>
+$ apropos grep
+exigrep (8)          - Search Exim's main log
+ack-grep (1p)        - grep-like text finder
+bzegrep (1)          - search possibly bzip2 compressed files for a regular expression
+bzfgrep (1)          - search possibly bzip2 compressed files for a regular expression
+bzgrep (1)           - search possibly bzip2 compressed files for a regular expression
+egrep (1)            - print lines matching a pattern
+exiqgrep (8)         - Search in the exim queue
+fgrep (1)            - print lines matching a pattern
+git-grep (1)         - Print lines matching a pattern
+grep (1)             - print lines matching a pattern
+grep-changelog (1)   - print ChangeLog entries matching criteria
+grep-changelog.emacs24 (1) - print ChangeLog entries matching criteria
+lzegrep (1)          - search compressed files for a regular expression
+lzfgrep (1)          - search compressed files for a regular expression
+lzgrep (1)           - search compressed files for a regular expression
+msggrep (1)          - pattern matching on message catalog
+pgrep (1)            - look up or signal processes based on name and other attributes
+ptargrep (1)         - Apply pattern matching to the contents of files in a tar archive
+rgrep (1)            - print lines matching a pattern
+xzegrep (1)          - search compressed files for a regular expression
+xzfgrep (1)          - search compressed files for a regular expression
+xzgrep (1)           - search compressed files for a regular expression
+zegrep (1)           - search possibly compressed files for a regular expression
+zfgrep (1)           - search possibly compressed files for a regular expression
+zgrep (1)            - search possibly compressed files for a regular expression
+zipgrep (1)          - search files in a ZIP archive for lines matching a pattern
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row seven-->
+            <td><a href="http://ss64.com/bash/man.html">man</a> [name]</td>
+            <td>Displays details in the bash window of the named command.</td>
+            <td>
+                <pre>
+                    <span>
+$ man ls
+LS(1)                                          User Commands                                         LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory by default).  Sort entries alphabetically
+       if none of -cftuvSUX nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              scale sizes by SIZE before printing them.  E.g., '--block-size=M' prints sizes in  units  of
+              1,048,576 bytes.  See SIZE format below.
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+
+       -c     with  -lt:  sort  by, and show, ctime (time of last modification of file status information)
+              with -l: show ctime and sort by name otherwise: sort by ctime, newest first
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              colorize the output.  WHEN defaults to 'always' or can be  'never'  or  'auto'.   More  info
+              below
+
+       -d, --directory
+              list directory entries instead of contents, and do not dereference symbolic links
+
+       -D, --dired
+              generate output designed for Emacs' dired mode
+
+       -f     do not sort, enable -aU, disable -ls --color
+
+       -F, --classify
+              append indicator (one of */=>@|) to entries
+ Manual page ls(1) line 1/225 22% (press h for help or q to quit)
+                    </span>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row eight-->
+            <td><a href="http://ss64.com/bash/pwd.html">pwd</a> [options]</td>
+            <td>Displays in terminal window the current working directory.</td>
+            <td>
+                <pre>
+$ pwd
+/home/ubuntu
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row nine-->
+            <td><a href="http://ss64.com/bash/cd.html">cd</a> [filename]</td>
+            <td>Change the working directory.</td>
+            <td>
+                <pre>
+$ cd workspace/private/folder
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row ten-->
+            <td><a href="http://ss64.com/bash/mkdir.html">mkdir</a> [options] folder</td>
+            <td>Creates a folder in the current directory.</td>
+            <td>
+                <pre>
+$ mkdir temp
+$ ls
+README.md  hello-world.html  temp/
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row 11-->
+            <td><a href="http://ss64.com/bash/echo.html">echo</a> [options] [string]</td>
+            <td>Prints the string to the console.</td>
+            <td>
+                <pre>
+$ echo hi
+hi
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row 12-->
+            <td><a href="http://ss64.com/bash/cat.html">cat</a> [options] [file]</td>
+            <td>Can display and combine files into one file.</td>
+            <td>
+                <pre>
+$ cat demo1.txt
+The first text file created for testing bash commands.
+
+$ cat demo1.txt demo2.txt > demo3.txt
+$ cat demo3.txt
+The first text file created for testing bash commands.Here is the second demo text file created.
+
+I skipped a line in this file.
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row 13-->
+            <td><a href="http://ss64.com/bash/less.html">less</a> [options] [filename]</td>
+            <td>Prints text to screen allowing navigation through the file.</td>
+            <td>
+                <pre>
+$ less Lorem.txt
+0a.
+Lorem ipsum dolor sit amet, mel ex referrentur adversarium.
+Id mel omnis consul, his ex veniam partiendo petentium.
+An debitis habemus pro. Cum legimus accusata vulputate ex, no choro omnium repudiandae eam.
+At albucius intellegam est, option mentitum adipisci et eam, vix id probo voluptaria.
+
+Te cum sententiae definitionem, et vero probatus consequuntur sea, adipisci argumentum ei vis.
+Singulis rationibus mea et, quo in hinc verear inermis.
+Te posse deleniti molestie ius. Ut nec malorum consequat, eam agam tractatos at.
+Ut quo adhuc suavitate, eos error tantas reformidans et, an mei placerat invidunt.
+Copiosae accommodare te est, mei amet epicuri no.
+
+Vis ubique assentior definitionem ne, vidisse bonorum concludaturque qui cu. 
+Nostrud menandri in sea, sea dolor voluptatibus no, usu et everti noluisse temporibus. 
+Quo delenit maluisset maiestatis eu, nam ut liber veniam. 
+Sea ut paulo albucius perpetua, mei modo oportere elaboraret ne. 
+Lorem.txt
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row 14-->
+            <td><a href="http://ss64.com/bash/tail.html">tail</a> [options] [file]</td>
+            <td><p>Prints text to the screen giving the end of a file.</p><p>Useful for seeing changes in log files</p></td>
+            <td>
+                <pre>
+$ tail Lorem.txt
+Eu eam unum augue eirmod. 
+Cum justo summo concludaturque ei, cu sit decore lobortis appellantur, at vero doming sententiae mea.
+
+Ad tibique consulatu vix, dico clita assentior id vix. 
+Altera explicari per ne, ei nullam diceret lobortis nam. 
+Ei duo lorem tractatos, at viris laudem voluptatum vel, ex duo dico vide oblique. 
+Cu cum quod omnes exerci, eu mei detraxit tacimates. Nam et accusata sapientem, te pri dicit offendit. 
+Vix cu habeo causae commune, eu vim illud consul denique. 
+Stet scripserit ne cum.
+3b.
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <!--row 15-->
+            <td><a href="http://ss64.com/bash/nc.html">nc</a> [options] [IP address/Domain name] [port number]</td>
+            <td>Can check UDP and TCP connections through the console.</td>
+            <td>
+                <pre>
+$ nc iwastesomuchtime.com 80
+hi
+HTTP/1.1 400 Bad Request
+Date: Thu, 26 Jan 2017 21:42:45 GMT
+Content-Type: text/html
+Content-Length: 177
+Connection: close
+Server: -nginx
+CF-RAY: -
+
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;400 Bad Request&lt;/title&gt;&lt;/head&gt;
+&lt;body bgcolor="white"&gt;
+&lt;center&gt;&lt;h1&gt;400 Bad Request&lt;/h1&gt;&lt;/center&gt;
+&lt;hr&gt;&lt;center&gt;cloudflare-nginx&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </td>
+        </tr>
+        <!--<tr>-->
+            <!--row 16-->
+        <!--    <td><a href="http://ss64.com/bash/dig.html">dig</a></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--row 17-->
+        <!--    <td><a href="http://ss64.com/bash/ping.html">ping</a></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--row 18-->
+        <!--    <td><a href="http://ss64.com/bash/which.html">which</a></td>-->
+        <!--</tr>-->
+        <tr>
+            <!--row 19-->
+            <td><a href="http://ss64.com/bash/grep.html">grep</a></td>
+            <td>Search files for specific text.</td>
+            <td>
+                <pre>
+$ grep The temp/*
+temp/demo1.txt:<span class="red">The</span> first text file created for testing bash commands.
+temp/demo3.txt:<span class="red">The</span> first text file created for testing bash commands.Here is the second demo text file created.
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="http://ss64.com/bash/ps.html">ps</a> [options or -L]</td>
+            <td>
+                <p>Lists running processes.</p>
+                <p>-L list all keyword options</p>
+            </td>
+            <td>
+                <pre>
+$ ps
+    PID TTY          TIME CMD
+   5049 pts/1    00:00:00 bash
+   5050 pts/1    00:00:00 bash
+   5510 pts/1    00:00:00 ps
+                </pre>
+            </td>
+            </tr>
+        <!--<tr>-->
+            <!--row 20-->
+        <!--    <td><a href="http://ss64.com/bash/pgrep.html">pgrep</a></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--row 21-->
+        <!--    <td><a href="http://ss64.com/bash/pkill.html">pkill</a></td>-->
+        <!--    <td>Kill a named process.</td>-->
+        <!--    <td>-->
+        <!--        <pre>-->
+
+        <!--        </pre>-->
+        <!--    </td>-->
+        <!--</tr>-->
+        <tr>
+            <!--row 22-->
+            <td><a href="http://ss64.com/bash/sudo.html">sudo</a> [options] &lt;command&gt;</td>
+            <td>Gives root access for commands.</td>
+            <td>
+                <pre>
+$ sudo apt update
+Ign http://downloads-distro.mongodb.org dist InRelease
+Hit http://downloads-distro.mongodb.org dist Release.gpg                       
+Ign http://toolbelt.heroku.com ./ InRelease                                    
+Hit http://downloads-distro.mongodb.org dist Release                           
+Ign http://us-central1.gce.clouds.archive.ubuntu.com trusty InRelease          
+Get:1 http://ppa.launchpad.net trusty InRelease [15.5 kB]        
+.
+.
+.
+Get:56 http://us-central1.gce.clouds.archive.ubuntu.com trusty/multiverse i386 Packages [172 kB]
+Fetched 35.1 MB in 7s (4579 kB/s)                                              
+Reading package lists... Done
+                </pre>
+            </td>
+        </tr>
+    </table>
+
+
+    <img src="Morning-Glow-Photo-By-Andrew-Soundarajan.jpeg" alt="Morning-Glow-Photo-By-Andrew-Soundarajan" width=100 height=100>
+</body>
+
+</html>

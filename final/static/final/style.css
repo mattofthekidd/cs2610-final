@@ -1,0 +1,67 @@
+h1 {
+    font-family: fantasy;
+    color: red;
+    border: 2px dashed green;
+    float: left;
+}
+
+h2 {
+    font-family: cursive;
+    border: 2px solid blue;
+    float: left;
+}
+
+tr:hover, td:hover {
+    background-color: #71EEB8;
+}
+
+tr:first-of-type{
+    padding: 5px;
+    background-color: #2fe2f9;
+}
+
+a:hover {
+    font-size: large;
+}
+
+a:visited {
+    color: green;
+    padding: 4px;
+}
+
+body {
+    background-image: url("cloth-569222_960_720.jpg");
+    background-position: top;
+    background-attachment: fixed;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+p {
+    font-size: small;
+}
+
+.red {
+    color: red;
+}
+
+.secret {
+    font-size: 0;
+    font-stretch: ultra-condensed;
+    position: absolute;
+}
+
+.line {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    border: 5px dotted red;
+}
+
+td:nth-child(3):hover {
+    background-color: black;
+    color: #16f921;
+}
