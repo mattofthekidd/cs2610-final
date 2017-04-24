@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse
-from django.core.urlresolvers import reverse
+# from django.http import HttpResponseRedirect, HttpResponse
+# from django.core.urlresolvers import reverse
 from django.template import loader
 from django.views import generic
 
@@ -11,7 +11,5 @@ class ItemView(generic.ListView):
     context_object_name = 'table_item'
     def get_queryset(self):
         return Item.objects.order_by('-pub_date')[:5]
-        
-# class MainView(generic.DetailView):
-#     model = Main
-#     template_name = 'final/main.html'
+    def delete(request, id):
+        return Item.objects.filter(pk=id).delete()

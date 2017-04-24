@@ -2,6 +2,9 @@ from __future__ import unicode_literals
 
 import datetime
 
+from django.shortcuts import get_object_or_404
+from django.core.urlresolvers import reverse
+
 from django.db import models
 from django.utils import timezone
 from django.utils.encoding import python_2_unicode_compatible
